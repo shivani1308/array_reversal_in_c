@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num, *arr, i;
+    scanf("%d", &num);
+    arr = (int*) malloc(num * sizeof(int)); //for dynamically allocation
+    for(i = 0; i < num; i++) //loop 1
+	{
+        scanf("%d", arr + i); 
+    }
+
+
+    
+
+    for(i = num-1; i>-1; i--) //loop2
+        printf("%d ", *(arr + i));
+    return 0;
+}
